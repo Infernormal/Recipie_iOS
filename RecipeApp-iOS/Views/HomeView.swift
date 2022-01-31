@@ -11,12 +11,23 @@ import GoogleSignIn
 
 struct HomeView: View {
     
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+    
     @ObservedObject var model = RecipeCategoryListViewModel()
     
     @State var name = ""
 
     
     var body: some View {
+        Button(action: viewModel.signOut) {
+                  Text("Sign out")
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemIndigo))
+                    .cornerRadius(12)
+                    .padding()
+                }
         
         VStack {
         
