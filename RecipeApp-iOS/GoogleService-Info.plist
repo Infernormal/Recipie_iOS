@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>194504550429-4ufju184so3e9ef9s18gjii7lgl4b1rj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.194504550429-4ufju184so3e9ef9s18gjii7lgl4b1rj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeYDes7N85g6NLW3UvK4FhNZ7Hgmrd8BU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>194504550429</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.infernormal.Recipie-iOS</string>
+	<key>PROJECT_ID</key>
+	<string>recipie-308eb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>recipie-308eb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:194504550429:ios:931ce7e5a180401d97bef4</string>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+//
+//  HomeView.swift
+//  RecipeApp-iOS
+//
+//  Created by Karina Gorkava on 1/29/22.
+//
+import SwiftUI
+import Firebase
+import FirebaseFirestore
+import GoogleSignIn
+
+struct HomeView: View {
+    
+    @ObservedObject var model = RecipeCategoryListViewModel()
+    
+    @State var name = ""
+
+    
+    var body: some View {
+        
+        VStack {
+        
+            List (model.list) { item in
+                
+                HStack {
+                    Text(item.name)
+                    Spacer()
+                    
+                    
+                    // Delete button
+                    Button(action: {
+                        
+                        // Delete todo
+                        model.deleteData(categoryToDelete: item)
+                    }, label: {
+                        Image(systemName: "minus.circle")
+                    })
+                    .buttonStyle(BorderlessButtonStyle())
+                    
+                }
+            }
+            
+            Divider()
+            
+            VStack(spacing: 5) {
+                
+                TextField("Name", text: $name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                
+                Button(action: {
+                    
+                    // Call add data
+                    model.addData(name: name)
+                    
+                    // Clear the text fields
+                    name = ""
+                    
+                    
+                }, label: {
+                    Text("Add New Category")
+                })
+                
+            }
+            .padding()
+            
+        }
+        
+        
+    }
+    
+    init() {
+        model.getData()
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}

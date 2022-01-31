@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D486ED71F541561074F2C1E /* Pods_RecipeApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682BA5581185ECC6DB400B03 /* Pods_RecipeApp_iOS.framework */; };
+		8D18B6ED26F79E610058A2CD /* RecipeApp_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18B6EC26F79E610058A2CD /* RecipeApp_iOSApp.swift */; };
+		8D18B6EF26F79E610058A2CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18B6EE26F79E610058A2CD /* ContentView.swift */; };
+		8D18B6F126F79E620058A2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D18B6F026F79E620058A2CD /* Assets.xcassets */; };
+		8D18B6F426F79E620058A2CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D18B6F326F79E620058A2CD /* Preview Assets.xcassets */; };
+		8D18B6FF26F7A04B0058A2CD /* RecipeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18B6FE26F7A04B0058A2CD /* RecipeCategoryModel.swift */; };
+		8D18B70226F7A0C30058A2CD /* RecipeCategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18B70126F7A0C30058A2CD /* RecipeCategoryListViewModel.swift */; };
+		9F89D57727A668FD004E6048 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D57627A668FD004E6048 /* AuthenticationViewModel.swift */; };
+		9F89D57927A6693C004E6048 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D57827A6693C004E6048 /* GoogleSignInButton.swift */; };
+		9F89D57C27A66BC5004E6048 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F89D57B27A66BC5004E6048 /* HomeView.swift */; };
+		9F91A78627A6575900068C79 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F91A78527A6575900068C79 /* LoginView.swift */; };
+		9F99558427A35A7900DA534D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F99558327A35A7900DA534D /* GoogleService-Info.plist */; };
+		9FABE2E727A67A03004E8A84 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9FABE2E627A67A03004E8A84 /* GoogleSignIn */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BC953A52C9129B9B41FB19C /* Pods-RecipeApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		682BA5581185ECC6DB400B03 /* Pods_RecipeApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D18B6E926F79E610058A2CD /* RecipeApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RecipeApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D18B6EC26F79E610058A2CD /* RecipeApp_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeApp_iOSApp.swift; sourceTree = "<group>"; };
+		8D18B6EE26F79E610058A2CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8D18B6F026F79E620058A2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D18B6F326F79E620058A2CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8D18B6FE26F7A04B0058A2CD /* RecipeCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryModel.swift; sourceTree = "<group>"; };
+		8D18B70126F7A0C30058A2CD /* RecipeCategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryListViewModel.swift; sourceTree = "<group>"; };
+		9F89D57627A668FD004E6048 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		9F89D57827A6693C004E6048 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		9F89D57A27A66B18004E6048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9F89D57B27A66BC5004E6048 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9F91A78527A6575900068C79 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9F99558327A35A7900DA534D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D18B6E626F79E610058A2CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D486ED71F541561074F2C1E /* Pods_RecipeApp_iOS.framework in Frameworks */,
+				9FABE2E727A67A03004E8A84 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D003C112BB94777ED307F04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BC953A52C9129B9B41FB19C /* Pods-RecipeApp-iOS.debug.xcconfig */,
+				A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D18B6E026F79E610058A2CD = {
+			isa = PBXGroup;
+			children = (
+				8D18B6EB26F79E610058A2CD /* RecipeApp-iOS */,
+				8D18B6EA26F79E610058A2CD /* Products */,
+				3D003C112BB94777ED307F04 /* Pods */,
+				E50A0D786E2AD57DFE960E51 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8D18B6EA26F79E610058A2CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D18B6E926F79E610058A2CD /* RecipeApp-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D18B6EB26F79E610058A2CD /* RecipeApp-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9F89D57A27A66B18004E6048 /* Info.plist */,
+				8D18B6EC26F79E610058A2CD /* RecipeApp_iOSApp.swift */,
+				8D18B70926F7A2DD0058A2CD /* Views */,
+				8D18B70026F7A0A50058A2CD /* View Models */,
+				8D18B6FD26F7A02B0058A2CD /* Models */,
+				9F99558327A35A7900DA534D /* GoogleService-Info.plist */,
+				8D18B6F026F79E620058A2CD /* Assets.xcassets */,
+				8D18B6F226F79E620058A2CD /* Preview Content */,
+			);
+			path = "RecipeApp-iOS";
+			sourceTree = "<group>";
+		};
+		8D18B6F226F79E620058A2CD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8D18B6F326F79E620058A2CD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D18B6FD26F7A02B0058A2CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D18B6FE26F7A04B0058A2CD /* RecipeCategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D18B70026F7A0A50058A2CD /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D18B70126F7A0C30058A2CD /* RecipeCategoryListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		8D18B70926F7A2DD0058A2CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D18B6EE26F79E610058A2CD /* ContentView.swift */,
+				9F91A78527A6575900068C79 /* LoginView.swift */,
+				9F89D57827A6693C004E6048 /* GoogleSignInButton.swift */,
+				9F89D57627A668FD004E6048 /* AuthenticationViewModel.swift */,
+				9F89D57B27A66BC5004E6048 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E50A0D786E2AD57DFE960E51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				682BA5581185ECC6DB400B03 /* Pods_RecipeApp_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D18B6E826F79E610058A2CD /* RecipeApp-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D18B6F726F79E620058A2CD /* Build configuration list for PBXNativeTarget "RecipeApp-iOS" */;
+			buildPhases = (
+				63EEEDFDB0AEB02F4318A1FD /* [CP] Check Pods Manifest.lock */,
+				8D18B6E526F79E610058A2CD /* Sources */,
+				8D18B6E626F79E610058A2CD /* Frameworks */,
+				8D18B6E726F79E610058A2CD /* Resources */,
+				F33ADDA0C85FD8FEABDACAB0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RecipeApp-iOS";
+			packageProductDependencies = (
+				9FABE2E627A67A03004E8A84 /* GoogleSignIn */,
+			);
+			productName = "RecipeApp-iOS";
+			productReference = 8D18B6E926F79E610058A2CD /* RecipeApp-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D18B6E126F79E610058A2CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					8D18B6E826F79E610058A2CD = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 8D18B6E426F79E610058A2CD /* Build configuration list for PBXProject "RecipeApp-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D18B6E026F79E610058A2CD;
+			packageReferences = (
+				9FABE2E527A67A03004E8A84 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = 8D18B6EA26F79E610058A2CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D18B6E826F79E610058A2CD /* RecipeApp-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D18B6E726F79E610058A2CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D18B6F426F79E620058A2CD /* Preview Assets.xcassets in Resources */,
+				8D18B6F126F79E620058A2CD /* Assets.xcassets in Resources */,
+				9F99558427A35A7900DA534D /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63EEEDFDB0AEB02F4318A1FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RecipeApp-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33ADDA0C85FD8FEABDACAB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D18B6E526F79E610058A2CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F89D57727A668FD004E6048 /* AuthenticationViewModel.swift in Sources */,
+				8D18B70226F7A0C30058A2CD /* RecipeCategoryListViewModel.swift in Sources */,
+				8D18B6FF26F7A04B0058A2CD /* RecipeCategoryModel.swift in Sources */,
+				8D18B6EF26F79E610058A2CD /* ContentView.swift in Sources */,
+				9F91A78627A6575900068C79 /* LoginView.swift in Sources */,
+				9F89D57C27A66BC5004E6048 /* HomeView.swift in Sources */,
+				8D18B6ED26F79E610058A2CD /* RecipeApp_iOSApp.swift in Sources */,
+				9F89D57927A6693C004E6048 /* GoogleSignInButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D18B6F526F79E620058A2CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D18B6F626F79E620058A2CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D18B6F826F79E620058A2CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC953A52C9129B9B41FB19C /* Pods-RecipeApp-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeApp-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = KM93FJ8W84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RecipeApp-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infernormal.Recipie-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D18B6F926F79E620058A2CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeApp-iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = KM93FJ8W84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RecipeApp-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infernormal.Recipie-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D18B6E426F79E610058A2CD /* Build configuration list for PBXProject "RecipeApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D18B6F526F79E620058A2CD /* Debug */,
+				8D18B6F626F79E620058A2CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D18B6F726F79E620058A2CD /* Build configuration list for PBXNativeTarget "RecipeApp-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D18B6F826F79E620058A2CD /* Debug */,
+				8D18B6F926F79E620058A2CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FABE2E527A67A03004E8A84 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FABE2E627A67A03004E8A84 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FABE2E527A67A03004E8A84 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8D18B6E126F79E610058A2CD /* Project object */;
+}
