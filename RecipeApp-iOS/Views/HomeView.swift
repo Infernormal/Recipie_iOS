@@ -28,15 +28,17 @@ struct HomeView: View {
                     .cornerRadius(12)
                     .padding()
                 }
+        NavigationView {
         
         VStack {
         
             List (model.list) { item in
-                
+                NavigationLink(destination: RecipesListView()) {
                 HStack {
                     Text(item.name)
-                    Spacer()
+                        .navigationBarTitle("Categories")
                     
+                    Spacer()
                     
                     // Delete button
                     Button(action: {
@@ -48,37 +50,65 @@ struct HomeView: View {
                     })
                     .buttonStyle(BorderlessButtonStyle())
                     
+                    
                 }
+                    
             }
-            
-            Divider()
-            
-            VStack(spacing: 5) {
-                
-                TextField("Name", text: $name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                
-                Button(action: {
-                    
-                    // Call add data
-                    model.addData(name: name)
-                    
-                    // Clear the text fields
-                    name = ""
-                    
-                    
-                }, label: {
-                    Text("Add New Category")
-                })
-                
-            }
-            .padding()
             
         }
-        
+            Divider()
+          
+                  VStack(spacing: 5) {
+          
+                      TextField("Name", text: $name)
+                          .textFieldStyle(RoundedBorderTextFieldStyle())
+          
+          
+                      Button(action: {
+          
+                          // Call add data
+                          model.addData(name: name)
+          
+                          // Clear the text fields
+                          name = ""
+          
+          
+                      }, label: {
+                          Text("Add New Category")
+                      })
+          
+                  }
+                  .padding()
+            
+        }
+    
         
     }
+//        Divider()
+//
+//        VStack(spacing: 5) {
+//
+//            TextField("Name", text: $name)
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+//
+//
+//            Button(action: {
+//
+//                // Call add data
+//                model.addData(name: name)
+//
+//                // Clear the text fields
+//                name = ""
+//
+//
+//            }, label: {
+//                Text("Add New Category")
+//            })
+//
+//        }
+//        .padding()
+    }
+    
     
     init() {
         model.getData()
