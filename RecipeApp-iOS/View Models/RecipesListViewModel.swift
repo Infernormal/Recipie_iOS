@@ -43,13 +43,13 @@ class RecipeListViewModel: ObservableObject {
         
     }
     
-    func addData(recipeTitle: String) {
+    func addData(recipeTitle: String,image: String,ingridients:String,directions: String) {
         
         // Get a reference to the database
         let db = Firestore.firestore()
         
         // Add a document to a collection
-        db.collection("/categories/IVEbv9FlaR9aKbjEVznL/recipes").addDocument(data: ["recipeTitle":recipeTitle]) { error in
+        db.collection("/categories/IVEbv9FlaR9aKbjEVznL/recipes").addDocument(data: ["recipeTitle":recipeTitle,"image":image,"ingridients":ingridients,"directions":directions]) { error in
             
             // Check for errors
             if error == nil {
@@ -86,7 +86,10 @@ class RecipeListViewModel: ObservableObject {
                             
                             // Create a Category item for each document returned
                             return RecipeItem(id: d.documentID,
-                                              recipeTitle: d["recipeTitle"] as? String ?? "")
+                                              recipeTitle: d["recipeTitle"] as? String ?? "",
+                                              image: d["image"] as? String ?? "",
+                                              ingridients: d["ingridients"] as? String ?? "",
+                                              directions: d["directions"] as? String ?? "")
                         }
                     }
                     

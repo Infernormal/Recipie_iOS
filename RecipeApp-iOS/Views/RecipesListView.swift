@@ -14,6 +14,9 @@ struct RecipesListView: View {
 
     @ObservedObject var model = RecipeListViewModel()
     @State var recipeTitle = ""
+    @State var image = ""
+    @State var ingridients = ""
+    @State var directions = ""
   
     var body: some View {
 //        NavigationView {
@@ -21,7 +24,7 @@ struct RecipesListView: View {
         VStack {
         
             List (model.list) { item in
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: DetailsPage(item:item)) {
                 HStack {
                     Text(item.recipeTitle)
                         .navigationBarTitle("Recipes")
@@ -50,15 +53,24 @@ struct RecipesListView: View {
                 
                 TextField("Title", text: $recipeTitle)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Image", text: $image)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Ingridients", text: $ingridients)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Directions", text: $directions)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
 
                 
                 Button(action: {
                     
                     // Call add data
-                    model.addData(recipeTitle: recipeTitle)
+                    model.addData(recipeTitle: recipeTitle, image:image, ingridients:ingridients, directions:directions)
                     
                     // Clear the text fields
                     recipeTitle = ""
+                    image = ""
+                    ingridients = ""
+                    directions = ""
                     
                     
                 }, label: {

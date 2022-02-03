@@ -13,7 +13,7 @@ struct RecipeItem: Identifiable {
 //    let imageUrl: String
     var id: String
     var recipeTitle: String
-//    var directions: String
-//    var image: String
-//    var ingridients: [String: Any]
+    var image: String
+    var ingridients: String
+    var directions: String
 }
