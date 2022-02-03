@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct RecipeItem: Identifiable {
+struct RecipeItem: Identifiable, Codable {
 //    let imageUrl: String
     var id: String
     var recipeTitle: String

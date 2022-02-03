@@ -17,9 +17,13 @@ struct DetailsPage: View {
         ScrollView{
         VStack {
 //            ZStack(alignment: .bottomTrailing){
-                Image(item.image)
-                    .resizable()
-                    .scaledToFit()
+            AsyncImage(url: URL(string: item.image))
+            { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 300, height: 200)
                 Text(item.ingridients)
                     .multilineTextAlignment(.leading)
                     .edgesIgnoringSafeArea(.top)
