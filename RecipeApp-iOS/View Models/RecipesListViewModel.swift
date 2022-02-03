@@ -14,13 +14,20 @@ class RecipeListViewModel: ObservableObject {
     
     @Published var list = [RecipeItem]()
     
+    //Use the ".id" of this property to dynamically query firebase based on what the user tapped
+    var recipeCategory: RecipeCategory
+    
+    init(recipeCategory: RecipeCategory) {
+        self.recipeCategory = recipeCategory
+    }
+    
     func deleteData(recipeToDelete: RecipeItem) {
         
         // Get a reference to the database
         let db = Firestore.firestore()
         
         // Specify the document to delete
-        db.collection("/categories/IVEbv9FlaR9aKbjEVznL/recipes").document(recipeToDelete.id).delete { error in
+        db.collection("/categories/\(recipeCategory.id)/recipes").document(recipeToDelete.id).delete { error in
             
             // Check for errors
             if error == nil {
@@ -49,7 +56,7 @@ class RecipeListViewModel: ObservableObject {
         let db = Firestore.firestore()
         
         // Add a document to a collection
-        db.collection("/categories/IVEbv9FlaR9aKbjEVznL/recipes").addDocument(data: ["recipeTitle":recipeTitle,"image":image,"ingridients":ingridients,"directions":directions]) { error in
+        db.collection("/categories/\(recipeCategory.id)/recipes").addDocument(data: ["recipeTitle":recipeTitle,"image":image,"ingridients":ingridients,"directions":directions]) { error in
             
             // Check for errors
             if error == nil {
@@ -70,7 +77,7 @@ class RecipeListViewModel: ObservableObject {
         let db = Firestore.firestore()
         
         // Read the documents at a specific path
-        db.collection("/categories/IVEbv9FlaR9aKbjEVznL/recipes").getDocuments { snapshot, error in
+        db.collection("/categories/\(recipeCategory.id)/recipes").getDocuments { snapshot, error in
             
             // Check for errors
             if error == nil {

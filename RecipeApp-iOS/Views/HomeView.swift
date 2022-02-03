@@ -33,7 +33,7 @@ struct HomeView: View {
         VStack {
         
             List (model.list) { item in
-                NavigationLink(destination: RecipesListView()) {
+                NavigationLink(destination: RecipesListView(recipeCategory: item)) {
                 HStack {
                     Text(item.name)
                         .navigationBarTitle("Categories")
