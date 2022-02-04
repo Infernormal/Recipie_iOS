@@ -12,7 +12,7 @@ import GoogleSignIn
 
 struct RecipesListView: View {
 
-    @ObservedObject var model = RecipeListViewModel()
+    @ObservedObject var model: RecipeListViewModel
     @State var recipeTitle = ""
     @State var image = ""
     @State var ingridients = ""
@@ -86,13 +86,15 @@ struct RecipesListView: View {
     }
     
     
-    init() {
-        model.getData()
+
+    init(recipeCategory: RecipeCategory) {
+                self.model = RecipeListViewModel(recipeCategory: recipeCategory)
+                self.model.getData()
     }
 }
 
 struct RecipesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesListView()
+        RecipesListView(recipeCategory: RecipeCategory(id: "DummyId", name: "DummyName"))
     }
 }
