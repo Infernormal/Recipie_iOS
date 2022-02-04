@@ -23,17 +23,32 @@ struct DetailsPage: View {
             } placeholder: {
                 ProgressView()
             }
-            .frame(width: 300, height: 200)
-                Text(item.ingridients)
-                    .multilineTextAlignment(.leading)
-                    .edgesIgnoringSafeArea(.top)
-//                    .scaledToFit()
-                Text(item.directions)
-//                    .scaledToFit()
+            .frame(width: 340, height: 225)
+            VStack(alignment: .leading,spacing:0) {
+                Text("**Ingredients:**")
+                        ForEach(item.ingredients, id: \.self) { ingredient in
+                            Text("- \(ingredient)")
+                        }
+                        
+            }
+            .padding(.top)
+            Button(action: {
+                
+                // Delete todo
+//                model.deleteData(categoryToDelete: item)
+            }, label: {
+                Text("Add to the List")
+            })
+            .buttonStyle(BorderedButtonStyle())
+            
+            Text("**Directions:** \(item.directions)")
+                .multilineTextAlignment(.leading)
+                .padding()
 //                    .scaledToFit()
                 Spacer()
             }
             .navigationTitle(item.recipeTitle)
+            .multilineTextAlignment(.center)
     }
 }
 }

@@ -26,6 +26,7 @@
 		9FABE2EF27AA0D78004E8A84 /* DetailsPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2EE27AA0D78004E8A84 /* DetailsPageViewModel.swift */; };
 		9FABE2F127AA0D9C004E8A84 /* DetailsPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */; };
 		9FABE2F327AA0DF9004E8A84 /* DetailsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */; };
+		9FABE2F527ACF01A004E8A84 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F427ACF01A004E8A84 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		9FABE2EE27AA0D78004E8A84 /* DetailsPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageViewModel.swift; sourceTree = "<group>"; };
 		9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageModel.swift; sourceTree = "<group>"; };
 		9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageView.swift; sourceTree = "<group>"; };
+		9FABE2F427ACF01A004E8A84 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				9FABE2E827A8B5B9004E8A84 /* RecipesListView.swift */,
 				9F89D57B27A66BC5004E6048 /* HomeView.swift */,
 				9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */,
+				9FABE2F427ACF01A004E8A84 /* ModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				9FABE2F327AA0DF9004E8A84 /* DetailsPageView.swift in Sources */,
 				9FABE2F127AA0D9C004E8A84 /* DetailsPageModel.swift in Sources */,
 				8D18B6EF26F79E610058A2CD /* ContentView.swift in Sources */,
+				9FABE2F527ACF01A004E8A84 /* ModalView.swift in Sources */,
 				9F91A78627A6575900068C79 /* LoginView.swift in Sources */,
 				9FABE2EF27AA0D78004E8A84 /* DetailsPageViewModel.swift in Sources */,
 				9F89D57C27A66BC5004E6048 /* HomeView.swift in Sources */,

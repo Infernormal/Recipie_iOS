@@ -16,6 +16,7 @@ struct HomeView: View {
     @ObservedObject var model = RecipeCategoryListViewModel()
     
     @State var name = ""
+    @State var showModalView = false
 
     
     var body: some View {
@@ -57,56 +58,14 @@ struct HomeView: View {
             
         }
             Divider()
-          
-                  VStack(spacing: 5) {
-          
-                      TextField("Name", text: $name)
-                          .textFieldStyle(RoundedBorderTextFieldStyle())
-          
-          
-                      Button(action: {
-          
-                          // Call add data
-                          model.addData(name: name)
-          
-                          // Clear the text fields
-                          name = ""
-          
-          
-                      }, label: {
-                          Text("Add New Category")
-                      })
-          
-                  }
-                  .padding()
             
+            Button("Add Category") {
+                self.showModalView.toggle()
+            }
         }
-    
-        
+        .sheet(isPresented: $showModalView,onDismiss: {
+            model.getData()}, content: {ModalView()})
     }
-//        Divider()
-//
-//        VStack(spacing: 5) {
-//
-//            TextField("Name", text: $name)
-//                .textFieldStyle(RoundedBorderTextFieldStyle())
-//
-//
-//            Button(action: {
-//
-//                // Call add data
-//                model.addData(name: name)
-//
-//                // Clear the text fields
-//                name = ""
-//
-//
-//            }, label: {
-//                Text("Add New Category")
-//            })
-//
-//        }
-//        .padding()
     }
     
     

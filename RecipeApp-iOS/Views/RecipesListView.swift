@@ -15,7 +15,7 @@ struct RecipesListView: View {
     @ObservedObject var model: RecipeListViewModel
     @State var recipeTitle = ""
     @State var image = ""
-    @State var ingridients = ""
+    @State var ingredients = ""
     @State var directions = ""
   
     var body: some View {
@@ -55,7 +55,7 @@ struct RecipesListView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Image", text: $image)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Ingridients", text: $ingridients)
+                TextField("Ingridients", text: $ingredients)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Directions", text: $directions)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -64,12 +64,12 @@ struct RecipesListView: View {
                 Button(action: {
                     
                     // Call add data
-                    model.addData(recipeTitle: recipeTitle, image:image, ingridients:ingridients, directions:directions)
+                    model.addData(recipeTitle: recipeTitle, image:image, ingredients:ingredients, directions:directions)
                     
                     // Clear the text fields
                     recipeTitle = ""
                     image = ""
-                    ingridients = ""
+                    ingredients = ""
                     directions = ""
                     
                     
