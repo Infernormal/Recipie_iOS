@@ -17,6 +17,8 @@ struct RecipesListView: View {
     @State var image = ""
     @State var ingredients = ""
     @State var directions = ""
+    @State var showModalView = false
+    @State var recipeCategory: RecipeCategory
   
     var body: some View {
 //        NavigationView {
@@ -40,55 +42,23 @@ struct RecipesListView: View {
                         Image(systemName: "minus.circle")
                     })
                     .buttonStyle(BorderlessButtonStyle())
-                    
-                    
                 }
-                    
             }
-            
         }
             Divider()
             
-            VStack(spacing: 5) {
-                
-                TextField("Title", text: $recipeTitle)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Image", text: $image)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Ingridients", text: $ingredients)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Directions", text: $directions)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                
-                Button(action: {
-                    
-                    // Call add data
-                    model.addData(recipeTitle: recipeTitle, image:image, ingredients:ingredients, directions:directions)
-                    
-                    // Clear the text fields
-                    recipeTitle = ""
-                    image = ""
-                    ingredients = ""
-                    directions = ""
-                    
-                    
-                }, label: {
-                    Text("Add New Recipe")
-                })
-                
+            Button("Add Recipe") {
+                self.showModalView.toggle()
             }
-            .padding()
-    
         }
-//    }
+        .sheet(isPresented: $showModalView,onDismiss: {
+            model.getData()}, content: {ModalViewRecipe(recipeCategory: recipeCategory)})
 
     }
     
-    
-
     init(recipeCategory: RecipeCategory) {
                 self.model = RecipeListViewModel(recipeCategory: recipeCategory)
+                self.recipeCategory = recipeCategory
                 self.model.getData()
     }
 }

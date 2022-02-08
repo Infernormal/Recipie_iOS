@@ -27,6 +27,7 @@
 		9FABE2F127AA0D9C004E8A84 /* DetailsPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */; };
 		9FABE2F327AA0DF9004E8A84 /* DetailsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */; };
 		9FABE2F527ACF01A004E8A84 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F427ACF01A004E8A84 /* ModalView.swift */; };
+		9FABE2F727B1DDAD004E8A84 /* ModalViewRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F627B1DDAD004E8A84 /* ModalViewRecipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageModel.swift; sourceTree = "<group>"; };
 		9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageView.swift; sourceTree = "<group>"; };
 		9FABE2F427ACF01A004E8A84 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		9FABE2F627B1DDAD004E8A84 /* ModalViewRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewRecipe.swift; sourceTree = "<group>"; };
 		A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 				9F89D57B27A66BC5004E6048 /* HomeView.swift */,
 				9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */,
 				9FABE2F427ACF01A004E8A84 /* ModalView.swift */,
+				9FABE2F627B1DDAD004E8A84 /* ModalViewRecipe.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FABE2F727B1DDAD004E8A84 /* ModalViewRecipe.swift in Sources */,
 				9FABE2EB27A8B668004E8A84 /* RecipesListViewModel.swift in Sources */,
 				9F89D57727A668FD004E6048 /* AuthenticationViewModel.swift in Sources */,
 				9FABE2ED27A8B6A9004E8A84 /* RecipeItemModel.swift in Sources */,
