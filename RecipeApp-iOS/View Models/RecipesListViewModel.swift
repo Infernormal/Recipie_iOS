@@ -50,7 +50,7 @@ class RecipeListViewModel: ObservableObject {
         
     }
     
-    func addData(recipeTitle: String,image: String,ingredients:String,directions: String) {
+    func addData(recipeTitle: String,image: String,ingredients:[String],directions: String) {
         
         // Get a reference to the database
         let db = Firestore.firestore()
