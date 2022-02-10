@@ -39,7 +39,7 @@ struct GroceryListView: View {
     }
 }
 }
-    init(groceryList : GroceryList) {
-        model = GroceryListViewModel(groceryList: groceryList)
-    }
+    init(model : GroceryListViewModel) {
+          self.model = model
+}
 }

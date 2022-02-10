@@ -11,12 +11,12 @@ import FirebaseFirestore
 
 
 class GroceryListViewModel: ObservableObject {
-    //IT'S GONNA BE 1 DOCUMENT NOT THE LIST OF DOCUMENTS
-    @Published var groceryList : GroceryList
-    init(groceryList : GroceryList) {
-                self.groceryList = groceryList
-    }
-    
+    @Published var groceryList = GroceryList(id: "", list: [])
+        init() {
+          getList { groceryList in
+            self.groceryList = groceryList
+          }
+        }
     func refreshList() {
         
         // Get a reference to the database
@@ -73,9 +73,7 @@ class GroceryListViewModel: ObservableObject {
             if let document = document, document.exists {
                 let groceryData = document.data()
                 let groceryList = groceryData?["list"] as? [String]
-                // SHOULD RETURN GROCERYLIST INSTEAD OF PRINT STATEMENT
                 completion(GroceryList(id: groceryData?["id"] as? String ?? "", list: groceryList ?? [""]))
-//                print("Document data: \(dataDescription)")
             }
             else {
                 print("List does not exist")

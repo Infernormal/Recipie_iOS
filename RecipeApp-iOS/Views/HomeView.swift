@@ -14,13 +14,13 @@ struct HomeView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
     @ObservedObject var model = RecipeCategoryListViewModel()
-//    @ObservedObject var modelGrocery : GroceryListViewModel
+    //Added this back in.  We need to model to do the logic for us
+    @ObservedObject var modelGrocery = GroceryListViewModel()
     
     @State var name = ""
     @State var showModalView = false
     @State var showGroceryListView = false
-    // var for grocery list
-    @State var groceryList: GroceryList
+    
 
     
     var body: some View {
@@ -38,7 +38,7 @@ struct HomeView: View {
         }
     .sheet(isPresented: $showGroceryListView,onDismiss: {
         //Passing view into modal
-        model.getData()}, content: {GroceryListView(groceryList: groceryList)})
+        model.getData()}, content: {GroceryListView(model: modelGrocery)})
         NavigationView {
         
         VStack {
@@ -74,14 +74,10 @@ struct HomeView: View {
     }
     }
     // Init for grocery list
-    init(groceryList:GroceryList) {
-        self.groceryList = groceryList
+    init() {
+         //We want to initialize the GroceryListViewModel on this screen so itll fetch it basically at the beginning of tha launch after you login
+        self.modelGrocery = GroceryListViewModel()
         model.getData()
     }
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}
