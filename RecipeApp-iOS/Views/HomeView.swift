@@ -14,21 +14,31 @@ struct HomeView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
     @ObservedObject var model = RecipeCategoryListViewModel()
+//    @ObservedObject var modelGrocery : GroceryListViewModel
     
     @State var name = ""
     @State var showModalView = false
+    @State var showGroceryListView = false
+    // var for grocery list
+    @State var groceryList: GroceryList
 
     
     var body: some View {
-        Button(action: viewModel.signOut) {
-                  Text("Sign out")
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(.systemIndigo))
-                    .cornerRadius(12)
-                    .padding()
-                }
+//        Button(action: viewModel.signOut) {
+//                  Text("Sign out")
+//                    .foregroundColor(.white)
+//                    .padding()
+//                    .frame(maxWidth: .infinity)
+//                    .background(Color(.systemIndigo))
+//                    .cornerRadius(12)
+//                    .padding()
+//                }
+        Button("Show the List") {
+            self.showGroceryListView.toggle()
+        }
+    .sheet(isPresented: $showGroceryListView,onDismiss: {
+        //Passing view into modal
+        model.getData()}, content: {GroceryListView(groceryList: groceryList)})
         NavigationView {
         
         VStack {
@@ -50,12 +60,8 @@ struct HomeView: View {
                         Image(systemName: "minus.circle")
                     })
                     .buttonStyle(BorderlessButtonStyle())
-                    
-                    
                 }
-                    
             }
-            
         }
             Divider()
             
@@ -67,15 +73,15 @@ struct HomeView: View {
             model.getData()}, content: {ModalView()})
     }
     }
-    
-    
-    init() {
+    // Init for grocery list
+    init(groceryList:GroceryList) {
+        self.groceryList = groceryList
         model.getData()
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
