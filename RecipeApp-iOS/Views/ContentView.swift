@@ -10,10 +10,10 @@ struct ContentView: View {
       case .signedOut: LoginView()
     }
   }
-}
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
+//struct ContentView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ContentView()
+//  }
+//}
 }

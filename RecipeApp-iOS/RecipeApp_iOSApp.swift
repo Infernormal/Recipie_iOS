@@ -9,6 +9,7 @@ import GoogleSignIn
 struct RecipeApp_iOSApp: App {
     @StateObject var viewModel = AuthenticationViewModel()
     
+
     init() {
         setupAuthentication()
     }
@@ -26,15 +27,4 @@ extension RecipeApp_iOSApp {
         FirebaseApp.configure()
     }
 }
-//struct RecipeApp_iOSApp: App {
-//
-////    init() {
-////        FirebaseApp.configure()
-////    }
-//    var body: some Scene {
-//        WindowGroup {
-//            LoginView()
-////            ContentView()
-//        }
-//    }
-//}
+
