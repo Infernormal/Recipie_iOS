@@ -12,9 +12,12 @@ import FirebaseFirestore
 
 class GroceryListViewModel: ObservableObject {
     //IT'S GONNA BE 1 DOCUMENT NOT THE LIST OF DOCUMENTS
-    @Published var groceryList : GroceryList
-    init(groceryList : GroceryList) {
-                self.groceryList = groceryList
+    //Took this out of the initializer because we know the grocery list is going to be there, gave it a default empty value, but in the init() we will go and get the grocery list from firebase
+    @Published var groceryList = GroceryList(id: "", list: [])
+    init() {
+      getList { groceryList in
+        self.groceryList = groceryList
+      }
     }
     
     func refreshList() {
