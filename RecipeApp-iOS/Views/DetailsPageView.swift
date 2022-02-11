@@ -12,7 +12,9 @@ import GoogleSignIn
 
 struct DetailsPage: View {
     let item: RecipeItem
+    @ObservedObject var model : GroceryListViewModel
     
+        
     var body: some View {
         ScrollView{
         VStack {
@@ -34,8 +36,8 @@ struct DetailsPage: View {
             .padding(.top)
             Button(action: {
                 
-                // Delete todo
-//                model.deleteData(categoryToDelete: item)
+                // Merge list
+                model.mergeLists(list: item.ingredients)
             }, label: {
                 Text("Add to the List")
             })

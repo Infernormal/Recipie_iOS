@@ -13,6 +13,7 @@ import GoogleSignIn
 struct RecipesListView: View {
 
     @ObservedObject var model: RecipeListViewModel
+    @ObservedObject var modelGrocery=GroceryListViewModel()
     @State var recipeTitle = ""
     @State var image = ""
     @State var ingredients = ""
@@ -26,7 +27,7 @@ struct RecipesListView: View {
         VStack {
         
             List (model.list) { item in
-                NavigationLink(destination: DetailsPage(item:item)) {
+                NavigationLink(destination: DetailsPage(item:item, model: modelGrocery)) {
                 HStack {
                     Text(item.recipeTitle)
                         .navigationBarTitle("Recipes")

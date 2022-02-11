@@ -39,30 +39,26 @@ class GroceryListViewModel: ObservableObject {
                 }
     }
         
-    
+    // PASSIN IN LIST OF INGREDIENTS I WANT TO ADD
     func mergeLists(list: [String]) {
 
         // Get a reference to the database
         let db = Firestore.firestore()
 
-        // APPEND NEW LIST AND REMOVE DUPES USING SET? using merge fields? will it work for array type?
-        db.collection("groceryList").document("HdAwNVwHVIJMjgp0qI2W").setData(["list":list]) { error in
+        // APPEND NEW LIST TO EXISTING LIST AND REMOVE DUPES
+        db.collection("groceryList").document("HdAwNVwHVIJMjgp0qI2W").updateData(["list": FieldValue.arrayUnion(list)])
+        { error in
 
             // Check for errors
             if error == nil {
                 // No errors
-
+            }
                 // Call get data to retrieve latest data
                 self.getList{ groceryList in
                     self.groceryList = groceryList
                 }
             }
-            else {
-                // Handle the error
-            }
-        }
     }
-    
     func getList(completion: @escaping (GroceryList) -> ()) {
         
         // Get a reference to the database
