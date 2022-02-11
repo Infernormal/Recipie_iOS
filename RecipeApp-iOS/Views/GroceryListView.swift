@@ -11,11 +11,23 @@ import FirebaseFirestore
 import GoogleSignIn
 
 struct GroceryListView: View {
-//    var groceryList : GroceryList
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var model : GroceryListViewModel
+    @State var checked = false
     
     var body: some View {
         ScrollView{
+            HStack {
+                Text("Dismiss")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .foregroundColor(.blue)
+
+                            .onTapGesture {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+            }
+            Spacer()
         VStack {
             Text("Your Grocery List:")
             VStack(alignment: .leading,spacing:0) {

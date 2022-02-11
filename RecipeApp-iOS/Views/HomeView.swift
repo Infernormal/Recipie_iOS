@@ -36,7 +36,7 @@ struct HomeView: View {
         Button("Show the List") {
             self.showGroceryListView.toggle()
         }
-    .sheet(isPresented: $showGroceryListView,onDismiss: {
+    .fullScreenCover(isPresented: $showGroceryListView,onDismiss: {
         //Passing view into modal
         model.getData()}, content: {GroceryListView(model: modelGrocery)})
         NavigationView {
