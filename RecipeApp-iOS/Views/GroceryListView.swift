@@ -13,7 +13,6 @@ import GoogleSignIn
 struct GroceryListView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var model : GroceryListViewModel
-    @State var checked = false
     
     var body: some View {
         ScrollView{
@@ -53,5 +52,8 @@ struct GroceryListView: View {
 }
     init(model : GroceryListViewModel) {
           self.model = model
+            model.getList { groceryList in
+            model.groceryList = groceryList
+}
 }
 }
