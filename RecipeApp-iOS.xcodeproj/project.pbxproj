@@ -31,7 +31,6 @@
 		9FABE2F927B346E6004E8A84 /* GroceryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F827B346E6004E8A84 /* GroceryListModel.swift */; };
 		9FABE2FB27B34766004E8A84 /* GroceryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2FA27B34766004E8A84 /* GroceryListViewModel.swift */; };
 		9FABE2FD27B354EF004E8A84 /* GroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2FC27B354EF004E8A84 /* GroceryListView.swift */; };
-		9FABE30427B8BF85004E8A84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F89D57A27A66B18004E6048 /* Info.plist */; };
 		9FABE30727B8C285004E8A84 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FABE30627B8C285004E8A84 /* PlusJakartaSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -255,7 +254,6 @@
 				9FABE30727B8C285004E8A84 /* PlusJakartaSans-Bold.ttf in Resources */,
 				8D18B6F126F79E620058A2CD /* Assets.xcassets in Resources */,
 				9F99558427A35A7900DA534D /* GoogleService-Info.plist in Resources */,
-				9FABE30427B8BF85004E8A84 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

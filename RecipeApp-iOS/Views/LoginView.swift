@@ -25,7 +25,8 @@ struct LoginView: View {
       Text("Welcome to Recipie!")
         .fontWeight(.black)
         .foregroundColor(Color(.systemOrange))
-        .font(Font.custom("PlusJakartaSans_Bold", size: 18))
+        .font(Font.custom("PlusJakartaSans-Bold", size: 18))
+        .fontWeight(.heavy)
         .multilineTextAlignment(.center)
 
       Text("Keep track of your favourite recipes")
