@@ -17,13 +17,14 @@ struct LoginView: View {
       Spacer()
 
       // 2
-      Image("header_image")
+      Image("logo_no_b")
         .resizable()
         .aspectRatio(contentMode: .fit)
+        .frame(width: 100, height: 100)
 
       Text("Welcome to Recipie!")
         .fontWeight(.black)
-        .foregroundColor(Color(.systemIndigo))
+        .foregroundColor(Color(.systemOrange))
         .font(.largeTitle)
         .multilineTextAlignment(.center)
 

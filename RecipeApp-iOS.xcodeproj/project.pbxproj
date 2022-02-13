@@ -31,6 +31,7 @@
 		9FABE2F927B346E6004E8A84 /* GroceryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F827B346E6004E8A84 /* GroceryListModel.swift */; };
 		9FABE2FB27B34766004E8A84 /* GroceryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2FA27B34766004E8A84 /* GroceryListViewModel.swift */; };
 		9FABE2FD27B354EF004E8A84 /* GroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2FC27B354EF004E8A84 /* GroceryListView.swift */; };
+		9FABE2FF27B8B3A8004E8A84 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9FABE2FE27B8B3A7004E8A84 /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9FABE2F827B346E6004E8A84 /* GroceryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListModel.swift; sourceTree = "<group>"; };
 		9FABE2FA27B34766004E8A84 /* GroceryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewModel.swift; sourceTree = "<group>"; };
 		9FABE2FC27B354EF004E8A84 /* GroceryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListView.swift; sourceTree = "<group>"; };
+		9FABE2FE27B8B3A7004E8A84 /* fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fonts; path = "RecipeApp-iOS/fonts"; sourceTree = SOURCE_ROOT; };
 		A63151D724C4BFEDB3E3D501 /* Pods-RecipeApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp-iOS/Pods-RecipeApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				8D18B70926F7A2DD0058A2CD /* Views */,
 				8D18B70026F7A0A50058A2CD /* View Models */,
 				8D18B6FD26F7A02B0058A2CD /* Models */,
+				9FABE2FE27B8B3A7004E8A84 /* fonts */,
 				9F99558327A35A7900DA534D /* GoogleService-Info.plist */,
 				8D18B6F026F79E620058A2CD /* Assets.xcassets */,
 				8D18B6F226F79E620058A2CD /* Preview Content */,
@@ -242,6 +245,7 @@
 				8D18B6F426F79E620058A2CD /* Preview Assets.xcassets in Resources */,
 				8D18B6F126F79E620058A2CD /* Assets.xcassets in Resources */,
 				9F99558427A35A7900DA534D /* GoogleService-Info.plist in Resources */,
+				9FABE2FF27B8B3A8004E8A84 /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
