@@ -22,8 +22,12 @@ struct RowView: View {
       Button(action:{checked.toggle();stroken.toggle()}) {
           HStack {
               Image(systemName: checked ? "checkmark.circle" : "circle")
-              Text(" \(item)")
-                  .strikethrough(stroken)}
+              Text(" \(item)").font(Font.custom("PlusJakartaSans-Bold", size: 18))
+                  .foregroundColor(Color("Brown"))
+                  .strikethrough(stroken)
+                  .padding()
+          }
+          .foregroundColor(Color("Yellow"))
       }
    }
 }

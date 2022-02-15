@@ -16,12 +16,17 @@ struct GroceryListView: View {
     @ObservedObject var model : GroceryListViewModel
 
     var body: some View {
+        ZStack{
+                            Image("dark")
+                .edgesIgnoringSafeArea(.all)
         ScrollView{
+           
             HStack {
-                Text("Dismiss")
+                Text("Dismiss").font(Font.custom("PlusJakartaSans-Bold", size: 15))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-                    .foregroundColor(.blue)
+                    .padding(.top,50)
+                    .foregroundColor(Color("Brown"))
 
                             .onTapGesture {
                                 presentationMode.wrappedValue.dismiss()
@@ -29,9 +34,12 @@ struct GroceryListView: View {
             }
             Spacer()
         VStack {
-            Text("Your Grocery List:")
+            
             VStack(alignment: .leading,spacing:0) {
-                Text("**Ingredients:**")
+                Text("Your Grocery List:").font(Font.custom("PlusJakartaSans-Bold", size: 25))
+                    .foregroundColor(Color("Brown"))
+                
+               
                 ForEach(model.groceryList.list, id: \.self) { listItem in
                     RowView(item: listItem)
                         }
@@ -41,14 +49,26 @@ struct GroceryListView: View {
                 
 //          Refresh list
                 model.refreshList()
-            }, label: {
-                Text("Erase the List")
-            })
-            .buttonStyle(BorderedButtonStyle())
+            }){
+                Text("erase the list")
+                    .font(Font.custom("PlusJakartaSans-Bold", size: 18))
+                    .foregroundColor(Color("Brown"))
+                    .frame(maxWidth: 200,maxHeight: 75)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 60)
+                                        .stroke(Color("Brown"), lineWidth: 6))
+                    
+            
+            }
+            .background(Color("White"))
+            .cornerRadius(60)
+                
             .navigationTitle("Grocery List")
             .multilineTextAlignment(.center)
     }
 }
+        }
 }
     init(model : GroceryListViewModel) {
           self.model = model
