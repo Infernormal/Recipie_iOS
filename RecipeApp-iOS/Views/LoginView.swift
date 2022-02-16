@@ -15,16 +15,20 @@ struct LoginView: View {
     var body: some View {
         
         ZStack {
-            Image("yellow")
+            Image("Frame 1")
                 .edgesIgnoringSafeArea(.all)
+            Rectangle()
+                .foregroundColor(.clear)
+                .overlay(Image("login panel"))
+                .padding(.top,250)
             
             VStack {
                 Spacer()
-                Image("logomark")
+                Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 134, height: 134)
-                    .padding(.top, 170)
+                    .frame(width: 160, height: 174)
+                    .padding(EdgeInsets(top: 265, leading: 0, bottom: 0, trailing: 7))
                 
                 Text("Welcome to Recipie!")
                     .fontWeight(.black)
@@ -32,7 +36,7 @@ struct LoginView: View {
                     .font(Font.custom("PlusJakartaSans-Bold", size: 25))
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
-                    .padding(.top, 100)
+                    .padding()
                 
                 Text("Keep track of your favourite recipes")
                     .font(Font.custom("PlusJakartaSans-Regular", size: 18))

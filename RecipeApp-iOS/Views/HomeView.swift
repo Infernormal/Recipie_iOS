@@ -72,7 +72,7 @@ struct HomeView: View {
                         .background(Color("Orange"))
                         .clipShape(Circle())
                     
-                        .padding(.bottom,75)
+                        .padding(.bottom,130)
                 }
                 .sheet(isPresented: $showModalView,onDismiss: {
                     model.getData()}, content: {ModalView()})
