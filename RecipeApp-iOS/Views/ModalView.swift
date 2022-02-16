@@ -17,7 +17,7 @@ struct ModalView: View {
     @ObservedObject var model = RecipeCategoryListViewModel()
     var body: some View {
         ZStack {
-            Image("light")
+            Image("beige")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(minWidth: 0,maxWidth: .infinity)
@@ -40,12 +40,12 @@ struct ModalView: View {
         }){
             Text("add category")
                 .font(Font.custom("PlusJakartaSans-Bold", size: 18))
-                .foregroundColor(Color("Brown"))
+                .foregroundColor(Color("Red"))
                 .frame(maxWidth: 150,maxHeight: 20)
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 60)
-                                    .stroke(Color("Brown"), lineWidth: 6))
+                                    .stroke(Color("Red"), lineWidth: 6))
                 
         
         }

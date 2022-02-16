@@ -16,9 +16,11 @@ struct DetailsPage: View {
     
         
     var body: some View {
+        ZStack{
+                            Image("light")
+                .edgesIgnoringSafeArea(.all)
         ScrollView{
         VStack {
-//            ZStack(alignment: .bottomTrailing){
             AsyncImage(url: URL(string: item.image))
             { image in
                 image.resizable()
@@ -26,6 +28,7 @@ struct DetailsPage: View {
                 ProgressView()
             }
             .frame(width: 340, height: 225)
+            .padding(.top,100)
             VStack(alignment: .leading,spacing:0) {
                 Text("**Ingredients:**")
                         ForEach(item.ingredients, id: \.self) { ingredient in
@@ -52,5 +55,6 @@ struct DetailsPage: View {
             .navigationTitle(item.recipeTitle)
             .multilineTextAlignment(.center)
     }
+}
 }
 }

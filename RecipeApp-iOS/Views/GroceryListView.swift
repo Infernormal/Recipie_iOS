@@ -17,27 +17,33 @@ struct GroceryListView: View {
 
     var body: some View {
         ZStack{
-                            Image("dark")
+                            Image("yellow")
                 .edgesIgnoringSafeArea(.all)
         ScrollView{
            
+            Spacer().frame(width: 0, height: 36.0, alignment: .topLeading)
             HStack {
-                Text("Dismiss").font(Font.custom("PlusJakartaSans-Bold", size: 15))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .padding(.top,50)
-                    .foregroundColor(Color("Brown"))
+                Button(action: {presentationMode.wrappedValue.dismiss()}) {
+                                  Image("arrow")
+                                    .padding()
+                                    .frame(width: 62,height: 62)
+                                    .background(Color("White"))
+                                    .cornerRadius(17)
+                                    .padding(.top, 50)
+                                }
 
-                            .onTapGesture {
-                                presentationMode.wrappedValue.dismiss()
-                            }
+                .padding(.leading,40)
+                Spacer()
+                    
             }
-            Spacer()
+           
+            
         VStack {
             
             VStack(alignment: .leading,spacing:0) {
-                Text("Your Grocery List:").font(Font.custom("PlusJakartaSans-Bold", size: 25))
-                    .foregroundColor(Color("Brown"))
+                Text("Grocery List:").font(Font.custom("PlusJakartaSans-Bold", size: 36))
+                    .foregroundColor(Color("Red"))
+                    .padding(EdgeInsets(top: 15, leading: 15, bottom: 20, trailing: 0))
                 
                
                 ForEach(model.groceryList.list, id: \.self) { listItem in
@@ -46,26 +52,28 @@ struct GroceryListView: View {
             }
             
             Button(action: {
-                
-//          Refresh list
                 model.refreshList()
-            }){
-                Text("erase the list")
+            }){ HStack{
+ 
+                Text("delete list")
                     .font(Font.custom("PlusJakartaSans-Bold", size: 18))
-                    .foregroundColor(Color("Brown"))
+                    .foregroundColor(Color("White"))
                     .frame(maxWidth: 200,maxHeight: 75)
                     .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 60)
-                                        .stroke(Color("Brown"), lineWidth: 6))
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 60)
+//                                        .stroke(Color("White"), lineWidth: 6))
                     
             
             }
-            .background(Color("White"))
+            .background(Color("Red"))
             .cornerRadius(60)
-                
-            .navigationTitle("Grocery List")
-            .multilineTextAlignment(.center)
+            .padding()
+            .padding(EdgeInsets(top: 20, leading: 50, bottom: 10, trailing: 50))
+            
+//            .navigationTitle("Grocery List")
+            .multilineTextAlignment(.leading)
+            }
     }
 }
         }

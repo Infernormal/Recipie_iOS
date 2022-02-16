@@ -26,14 +26,9 @@ struct HomeView: View {
             NavigationView {
                 
                 ZStack{
-//                    Color("Yellow")
-//                        .edgesIgnoringSafeArea(.all)
-                        
+                    Image("beige")
+                    .edgesIgnoringSafeArea(.all)
                     
-                                    Image("light")
-//                                        .resizable()
-//                                        .scaledToFill()
-//                                        .edgesIgnoringSafeArea(.all)
                     VStack(spacing:10) {
                 
                 HStack {
@@ -44,24 +39,28 @@ struct HomeView: View {
                                         .frame(maxWidth: 62,maxHeight: 62)
                                         .background(Color("White"))
                                         .cornerRadius(17)
-                                        .padding(.top, 30)
+                                        .padding(.top, 50)
                                     }
                             
-                                Button("Show the List") {
-                                    self.showGroceryListView.toggle()
-                                }
+                    Button(action:{self.showGroceryListView.toggle()})
+                                        {Image("grocery list")
+                        .frame(maxWidth: 62,maxHeight: 62)
+                    }
+                        
+                                           
+                                           
                             .fullScreenCover(isPresented: $showGroceryListView,onDismiss: {
                                 //Passing view into modal
                                 model.getData()}, content: {GroceryListView(model: modelGrocery)})
                             .frame(maxWidth: 100, maxHeight: 75)
-                            .padding(.top,30)
+                            .padding(.top,50)
                 }
             
                 .navigationBarTitle("Categories")
                 .navigationBarHidden(true)
                 Text("Categories").font(Font.custom("PlusJakartaSans-Bold", size: 30))
                     .frame(width: 200, height: 40)
-                    .foregroundColor(Color("Orange"))
+                    .foregroundColor(Color("Red"))
           
                     
                 List (model.list) { item in
@@ -77,7 +76,7 @@ struct HomeView: View {
                             // Delete todo
                             model.deleteData(categoryToDelete: item)
                         }, label: {
-                            Image("Trash")
+                            Image("trash")
                         })
                         .buttonStyle(BorderlessButtonStyle())
                     }

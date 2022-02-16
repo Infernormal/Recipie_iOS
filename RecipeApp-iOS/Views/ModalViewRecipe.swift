@@ -21,12 +21,19 @@ struct ModalViewRecipe: View {
     @ObservedObject var model : RecipeListViewModel
     
     var body: some View {
+        ZStack {
+            Image("beige")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(minWidth: 0,maxWidth: .infinity)
         VStack(spacing: 5) {
             
             TextField("Title", text: $recipeTitle)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(EdgeInsets(top: 100, leading: 15, bottom: 0, trailing: 15))
             TextField("Image", text: $image)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
             List {
                 Section {
                     HStack {
@@ -35,7 +42,7 @@ struct ModalViewRecipe: View {
                             .textFieldStyle(PlainTextFieldStyle())
                         Spacer()
                         Button(action: {addNewIngredient()}, label: {
-                            Image(systemName: "plus.circle")
+                            Image("Plus")
                         })
                         .buttonStyle(BorderlessButtonStyle())
                     }
@@ -51,6 +58,7 @@ struct ModalViewRecipe: View {
             }
             TextField("Directions", text: $directions)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(EdgeInsets(top: 0, leading: 15, bottom: 100, trailing: 15))
 
             
             Button(action: {
@@ -65,13 +73,25 @@ struct ModalViewRecipe: View {
                 directions = ""
                 self.presentationMode.wrappedValue.dismiss()
                 
-            }, label: {
-                Text("Add New Recipe")
-            })
+            }){
+                Text("add recipe")
+                    .font(Font.custom("PlusJakartaSans-Bold", size: 18))
+                    .foregroundColor(Color("Red"))
+                    .frame(maxWidth: 150,maxHeight: 20)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 60)
+                                        .stroke(Color("Red"), lineWidth: 6))
+                    
             
+            }
+            .background(Color("White"))
+            .cornerRadius(60)
+
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 15, bottom: 100, trailing: 15))
 }
+    }
     init(recipeCategory: RecipeCategory) {
         self.model = RecipeListViewModel (recipeCategory: recipeCategory)
     }

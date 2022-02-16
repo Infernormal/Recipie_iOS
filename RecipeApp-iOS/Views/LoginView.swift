@@ -14,7 +14,7 @@ struct LoginView: View {
 
   var body: some View {
       ZStack {
-          Image("light")
+          Image("yellow")
               .resizable()
               .aspectRatio(contentMode: .fill)
               .frame(minWidth: 0,maxWidth: .infinity)
@@ -22,7 +22,7 @@ struct LoginView: View {
             Spacer()
 
             // 2
-            Image("logo-1")
+            Image("logomark")
               .resizable()
               .aspectRatio(contentMode: .fit)
               .frame(width: 134, height: 134)
@@ -30,7 +30,7 @@ struct LoginView: View {
 
             Text("Welcome to Recipie!")
               .fontWeight(.black)
-              .foregroundColor(Color("Orange"))
+              .foregroundColor(Color("Red"))
               .font(Font.custom("PlusJakartaSans-Bold", size: 25))
               .fontWeight(.heavy)
               .multilineTextAlignment(.center)
@@ -51,37 +51,6 @@ struct LoginView: View {
               }
           }
       }
-//    VStack {
-//      Spacer()
-//
-//      // 2
-//      Image("logo_no_b")
-//        .resizable()
-//        .aspectRatio(contentMode: .fit)
-//        .frame(width: 100, height: 100)
-//        .padding(.top, 170)
-//
-//      Text("Welcome to Recipie!")
-//        .fontWeight(.black)
-//        .foregroundColor(Color("Orange"))
-//        .font(Font.custom("PlusJakartaSans-Bold", size: 25))
-//        .fontWeight(.heavy)
-//        .multilineTextAlignment(.center)
-//
-//      Text("Keep track of your favourite recipes")
-//        .font(Font.custom("PlusJakartaSans-Bold", size: 18))
-//        .multilineTextAlignment(.center)
-//        .padding()
-//
-//      Spacer()
-//
-//      // 3
-//      GoogleSignInButton()
-//        .padding()
-//        .onTapGesture {
-//          viewModel.signIn()
-//        }
-//    }
   }
 }
 
