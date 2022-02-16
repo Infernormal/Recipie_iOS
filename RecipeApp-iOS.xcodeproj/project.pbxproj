@@ -24,7 +24,6 @@
 		9FABE2EB27A8B668004E8A84 /* RecipesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2EA27A8B668004E8A84 /* RecipesListViewModel.swift */; };
 		9FABE2ED27A8B6A9004E8A84 /* RecipeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2EC27A8B6A9004E8A84 /* RecipeItemModel.swift */; };
 		9FABE2EF27AA0D78004E8A84 /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2EE27AA0D78004E8A84 /* RowViewModel.swift */; };
-		9FABE2F127AA0D9C004E8A84 /* DetailsPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */; };
 		9FABE2F327AA0DF9004E8A84 /* DetailsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */; };
 		9FABE2F527ACF01A004E8A84 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F427ACF01A004E8A84 /* ModalView.swift */; };
 		9FABE2F727B1DDAD004E8A84 /* ModalViewRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABE2F627B1DDAD004E8A84 /* ModalViewRecipe.swift */; };
@@ -55,7 +54,6 @@
 		9FABE2EA27A8B668004E8A84 /* RecipesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewModel.swift; sourceTree = "<group>"; };
 		9FABE2EC27A8B6A9004E8A84 /* RecipeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemModel.swift; sourceTree = "<group>"; };
 		9FABE2EE27AA0D78004E8A84 /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
-		9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageModel.swift; sourceTree = "<group>"; };
 		9FABE2F227AA0DF9004E8A84 /* DetailsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageView.swift; sourceTree = "<group>"; };
 		9FABE2F427ACF01A004E8A84 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		9FABE2F627B1DDAD004E8A84 /* ModalViewRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewRecipe.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 			children = (
 				8D18B6FE26F7A04B0058A2CD /* RecipeCategoryModel.swift */,
 				9FABE2EC27A8B6A9004E8A84 /* RecipeItemModel.swift */,
-				9FABE2F027AA0D9C004E8A84 /* DetailsPageModel.swift */,
 				9FABE2F827B346E6004E8A84 /* GroceryListModel.swift */,
 			);
 			path = Models;
@@ -318,7 +315,6 @@
 				9FABE2E927A8B5B9004E8A84 /* RecipesListView.swift in Sources */,
 				8D18B6FF26F7A04B0058A2CD /* RecipeCategoryModel.swift in Sources */,
 				9FABE2F327AA0DF9004E8A84 /* DetailsPageView.swift in Sources */,
-				9FABE2F127AA0D9C004E8A84 /* DetailsPageModel.swift in Sources */,
 				8D18B6EF26F79E610058A2CD /* ContentView.swift in Sources */,
 				9FABE2F527ACF01A004E8A84 /* ModalView.swift in Sources */,
 				9FABE2FD27B354EF004E8A84 /* GroceryListView.swift in Sources */,

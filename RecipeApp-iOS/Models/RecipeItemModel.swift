@@ -7,10 +7,7 @@
 
 import Foundation
 
-
-
 struct RecipeItem: Identifiable, Codable {
-//    let imageUrl: String
     var id: String
     var recipeTitle: String
     var image: String

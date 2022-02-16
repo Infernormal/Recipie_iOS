@@ -13,7 +13,7 @@ import SwiftUI
 struct ModalView: View {
     @State var name = ""
     @Environment(\.presentationMode) private var presentationMode
-
+    
     @ObservedObject var model = RecipeCategoryListViewModel()
     var body: some View {
         ZStack {
@@ -21,39 +21,35 @@ struct ModalView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(minWidth: 0,maxWidth: .infinity)
-    VStack(spacing: 5) {
-
-        TextField("Name", text: $name)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
-
-
-        Button(action: {
-
-            // Call add data
-            model.addData(name: name)
-
-            // Clear the text fields
-            name = ""
-            self.presentationMode.wrappedValue.dismiss()
-
-        }){
-            Text("add category")
-                .font(Font.custom("PlusJakartaSans-Bold", size: 18))
-                .foregroundColor(Color("Red"))
-                .frame(maxWidth: 150,maxHeight: 20)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 60)
-                                    .stroke(Color("Red"), lineWidth: 6))
+            VStack(spacing: 5) {
                 
-        
+                TextField("Name", text: $name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                
+                Button(action: {
+                    
+                    model.addData(name: name)
+                    
+                    name = ""
+                    self.presentationMode.wrappedValue.dismiss()
+                    
+                }){
+                    Text("add category")
+                        .font(Font.custom("PlusJakartaSans-Bold", size: 18))
+                        .foregroundColor(Color("Red"))
+                        .frame(maxWidth: 150,maxHeight: 20)
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 60)
+                                .stroke(Color("Red"), lineWidth: 6))
+                }
+                .background(Color("White"))
+                .cornerRadius(60)
+                
+            }
+            .padding()
         }
-        .background(Color("White"))
-        .cornerRadius(60)
-
     }
-    .padding()
-}
-}
 }

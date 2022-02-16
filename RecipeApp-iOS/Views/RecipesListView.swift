@@ -24,79 +24,70 @@ struct RecipesListView: View {
     @State var recipeCategory: RecipeCategory
     @EnvironmentObject var viewModel: AuthenticationViewModel
     @State var showGroceryListView = false
-  
+    
     var body: some View {
+        
         ZStack{
             Image("yellow")
-                    .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing:10) {
                 
                 Spacer().frame(width: 0, height: 36.0, alignment: .topTrailing)
-
                     .fullScreenCover(isPresented: $showGroceryListView,onDismiss: {
-                        //Passing view into modal
                         modelList.getData()}, content: {GroceryListView(model: modelGrocery)})
-
+                
                 Spacer()
-    
-//        .navigationBarTitle("Recipes")
-//        .navigationBarHidden(true)
-        Text("Recipes").font(Font.custom("PlusJakartaSans-Bold", size: 30))
-            .frame(width: 200, height: 40)
-            .foregroundColor(Color("Red"))
-  
-            
-        
-            List (modelList.list) { item in
-                NavigationLink(destination: DetailsPage(item:item, model: modelGrocery)) {
-                HStack {
-                    Text(item.recipeTitle)
-                    
-                    Spacer()
-                    
-                    // Delete button
-                    Button(action: {
-                        
-                        // Delete recipe
-                        modelList.deleteData(recipeToDelete: item)
-                    }, label: {
-                        Image("trash")
-                    })
-                    .buttonStyle(BorderlessButtonStyle())
+                Text("Recipes").font(Font.custom("PlusJakartaSans-Bold", size: 30))
+                    .frame(width: 200, height: 40)
+                    .foregroundColor(Color("Red"))
+                
+                List (modelList.list) { item in
+                    NavigationLink(destination: DetailsPage(item:item, model: modelGrocery)) {
+                        HStack {
+                            Text(item.recipeTitle)
+                            Spacer()
+                            
+                            Button(action: {
+                                modelList.deleteData(recipeToDelete: item)
+                            }, label: {
+                                Image("trash")
+                            })
+                                .buttonStyle(BorderlessButtonStyle())
+                        }
+                    }
                 }
-            }
-        }
-            
+                
                 Button(action:{self.showModalView.toggle()},label: {Image("Vector")})
                     .frame(maxWidth: 62,maxHeight: 62)
                     .background(Color("Red"))
                     .clipShape(Circle())
                     .padding(.bottom,130)
-        }
+            }
             Spacer().frame(width: 0, height: 36.0, alignment: .topTrailing)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading:
-                Button(action: {
-                self.presentationMode.wrappedValue.dismiss()})
-                {Image("arrow")
-                  .padding()
-                  .frame(width: 45,height: 45)
-                  .background(Color("White"))
-                  .cornerRadius(17)},
-                trailing:  Button(action:{self.showGroceryListView.toggle()})
-                    {Image("grocery list")
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading:
+                                        Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()})
+                                    {Image("arrow")
+                        .padding()
+                        .frame(width: 45,height: 45)
+                        .background(Color("White"))
+                    .cornerRadius(17)},
+                                    trailing:  Button(action:{self.showGroceryListView.toggle()})
+                                    {Image("grocery list")
                     .frame(maxWidth: 62,maxHeight: 62)}
-             )
-        
-        .sheet(isPresented: $showModalView,onDismiss: {
-            modelList.getData()}, content: {ModalViewRecipe(recipeCategory: recipeCategory)})
+                )
+            
+                .sheet(isPresented: $showModalView,onDismiss: {
+                    modelList.getData()}, content: {ModalViewRecipe(recipeCategory: recipeCategory)})
         }
     }
     
     init(recipeCategory: RecipeCategory) {
-                self.modelList = RecipeListViewModel(recipeCategory: recipeCategory)
-                self._recipeCategory = State(initialValue: recipeCategory)
-                self.modelList.getData()
+        self.modelList = RecipeListViewModel(recipeCategory: recipeCategory)
+        self._recipeCategory = State(initialValue: recipeCategory)
+        self.modelList.getData()
     }
 }
 
