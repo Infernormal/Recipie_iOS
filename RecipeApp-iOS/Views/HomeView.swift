@@ -29,35 +29,47 @@ struct HomeView: View {
                     Image("beige")
                     .edgesIgnoringSafeArea(.all)
                     
-                    VStack(spacing:10) {
+//                    VStack(spacing:10) {
                 
-                HStack {
-                    Button(action: viewModel.signOut) {
-                                      Image("Edit")
-//                                        .foregroundColor(.white)
-//                                        .padding()
-                                        .frame(maxWidth: 62,maxHeight: 62)
-                                        .background(Color("White"))
-                                        .cornerRadius(17)
-                                        .padding(.top, 50)
-                                    }
+//                HStack {
+//                    Button(action: viewModel.signOut) {
+//                    Image("Edit")
+//
+//                    .frame(maxWidth: 62,maxHeight: 62)
+//                    .background(Color("White"))
+//                    .cornerRadius(17)
+//                    .padding(.top, 50)
+//                    }
+//
+//                    Button(action:{self.showGroceryListView.toggle()})
+//                                        {Image("grocery list")
+//                        .frame(maxWidth: 62,maxHeight: 62)
+//                    }
+//
+                
+                                           
+                    VStack(spacing:10) {
+                        Spacer().frame(width: 0, height: 36.0, alignment: .topTrailing)
                             
-                    Button(action:{self.showGroceryListView.toggle()})
-                                        {Image("grocery list")
+                
+            
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading:HStack {
+                    Button(action: viewModel.signOut) {
+                    Image("Edit")
+                    .frame(maxWidth: 62,maxHeight: 62)
+                  
+                    }},trailing: HStack { Button(action:{self.showGroceryListView.toggle()})
+                        {Image("grocery list")
                         .frame(maxWidth: 62,maxHeight: 62)
                     }
+                        .fullScreenCover(isPresented: $showGroceryListView,onDismiss: {
+                            //Passing view into modal
+                            model.getData()}, content: {GroceryListView(model: modelGrocery)})
                         
-                                           
-                                           
-                            .fullScreenCover(isPresented: $showGroceryListView,onDismiss: {
-                                //Passing view into modal
-                                model.getData()}, content: {GroceryListView(model: modelGrocery)})
-                            .frame(maxWidth: 100, maxHeight: 75)
-                            .padding(.top,50)
-                }
-            
-                .navigationBarTitle("Categories")
-                .navigationBarHidden(true)
+                    } )
+                    
+                        Spacer()
                 Text("Categories").font(Font.custom("PlusJakartaSans-Bold", size: 30))
                     .frame(width: 200, height: 40)
                     .foregroundColor(Color("Red"))

@@ -15,9 +15,7 @@ struct LoginView: View {
   var body: some View {
       ZStack {
           Image("yellow")
-              .resizable()
-              .aspectRatio(contentMode: .fill)
-              .frame(minWidth: 0,maxWidth: .infinity)
+              .edgesIgnoringSafeArea(.all)
           VStack {
             Spacer()
 

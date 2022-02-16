@@ -73,23 +73,20 @@ struct RecipesListView: View {
                     .clipShape(Circle())
                     .padding(.bottom,130)
         }
+            Spacer().frame(width: 0, height: 36.0, alignment: .topTrailing)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading:
-                                    HStack{
                 Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Image("arrow")
+                self.presentationMode.wrappedValue.dismiss()})
+                {Image("arrow")
                   .padding()
-                  .frame(width: 62,height: 62)
+                  .frame(width: 45,height: 45)
                   .background(Color("White"))
-                  .cornerRadius(17)
-            }},trailing: HStack { Button(action:{self.showGroceryListView.toggle()})
-                                {Image("grocery list")
-                                        .frame(maxWidth: 62,maxHeight: 62)
-                
-                                }
-            } )
+                  .cornerRadius(17)},
+                trailing:  Button(action:{self.showGroceryListView.toggle()})
+                    {Image("grocery list")
+                    .frame(maxWidth: 62,maxHeight: 62)}
+             )
         
         .sheet(isPresented: $showModalView,onDismiss: {
             modelList.getData()}, content: {ModalViewRecipe(recipeCategory: recipeCategory)})

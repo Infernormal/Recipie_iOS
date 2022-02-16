@@ -26,10 +26,10 @@ struct GroceryListView: View {
                 Button(action: {presentationMode.wrappedValue.dismiss()}) {
                                   Image("arrow")
                                     .padding()
-                                    .frame(width: 62,height: 62)
+                                    .frame(width: 45,height: 45)
                                     .background(Color("White"))
                                     .cornerRadius(17)
-                                    .padding(.top, 50)
+                                    .padding()
                                 }
 
                 .padding(.leading,40)
@@ -60,12 +60,8 @@ struct GroceryListView: View {
                     .foregroundColor(Color("White"))
                     .frame(maxWidth: 200,maxHeight: 75)
                     .padding()
-//                    .overlay(
-//                        RoundedRectangle(cornerRadius: 60)
-//                                        .stroke(Color("White"), lineWidth: 6))
-                    
-            
-            }
+
+                   }
             .background(Color("Red"))
             .cornerRadius(60)
             .padding()
